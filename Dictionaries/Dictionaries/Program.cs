@@ -19,6 +19,21 @@ namespace Dictionaries
                 stringToInt[i.ToString()] = i;
                 Console.WriteLine(stringToInt[i.ToString()]);
             }
+
+            Console.WriteLine("\n\n");
+
+            Dictionary<float, bool> floatToBool = new Dictionary<float, bool>();
+
+            bool b = false;
+            float f = 0.0F;
+            while (f < 1)
+            {
+                b = !b;
+                f += 0.1F;
+                floatToBool[f] = b;
+                Console.WriteLine(floatToBool[f]);
+            }
+
             Console.ReadLine();
         }
     }
