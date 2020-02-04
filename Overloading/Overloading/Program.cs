@@ -34,6 +34,12 @@ namespace Overloading
             Console.WriteLine(math.Divide(6.6F, 2.2F));
             Console.WriteLine(math.Divide("9,3", "3"));
 
+            Console.WriteLine("\n");
+
+            Console.WriteLine(math.Power(4, 2));
+            Console.WriteLine(math.Power(2.3F, 4.1F));
+            Console.WriteLine(math.Power("9,3", "3"));
+
             Console.ReadLine();
         }
 
@@ -103,6 +109,47 @@ namespace Overloading
             public string Divide(string a, string b)
             {
                 return (Convert.ToDouble(a) / Convert.ToDouble(b)).ToString();
+            }
+
+            //---------------------------------------------------------------------------
+
+            public int Power(int a, int b)
+            {
+                int c = 1;
+                int i = 0;
+                while (i < b)
+                {
+                    c = c * a;
+                    i++;
+                }
+
+                return c;
+            }
+
+            public float Power(float a, float b)
+            {
+                float c = 1;
+                int i = 0;
+                while (i < b)
+                {
+                    c = c * a;
+                    i++;
+                }
+
+                return c;
+            }
+
+            public string Power(string a, string b)
+            {
+                double c = 1;
+                int i = 0;
+                while (i < Convert.ToDouble(b))
+                {
+                    c = c * Convert.ToDouble(a);
+                    i++;
+                }
+
+                return c.ToString();
             }
         }
     }
