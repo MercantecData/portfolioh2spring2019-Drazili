@@ -34,7 +34,31 @@ namespace Dictionaries
                 Console.WriteLine(floatToBool[f]);
             }
 
+            Console.WriteLine("\n\n");
+
+            Person p1 = new Person("Mig", 666);
+            Person p2 = new Person("Dig", 420);
+            Person p3 = new Person("Sig", 69);
+
+            Dictionary<Person, bool> personDictionary = new Dictionary<Person, bool>();
+
+            stringToInt[p1] = false;
+            stringToInt[p2] = false;
+            stringToInt[p3] = false;
+
             Console.ReadLine();
+        }
+
+        public class Person
+        {
+            string name;
+            int age;
+
+            public Person(string name, int age)
+            {
+                this.name = name;
+                this.age = age;
+            }
         }
     }
 }
