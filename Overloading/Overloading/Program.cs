@@ -28,6 +28,12 @@ namespace Overloading
             Console.WriteLine(math.Multiply(1.3F, 2.2F));
             Console.WriteLine(math.Multiply("3,1", "3"));
 
+            Console.WriteLine("\n");
+
+            Console.WriteLine(math.Divide(4, 2));
+            Console.WriteLine(math.Divide(6.6F, 2.2F));
+            Console.WriteLine(math.Divide("9,3", "3"));
+
             Console.ReadLine();
         }
 
@@ -80,6 +86,23 @@ namespace Overloading
             public string Multiply(string a, string b)
             {
                 return (Convert.ToDouble(a) * Convert.ToDouble(b)).ToString();
+            }
+
+            //---------------------------------------------------------------------------
+
+            public int Divide(int a, int b)
+            {
+                return a / b;
+            }
+
+            public float Divide(float a, float b)
+            {
+                return a / b;
+            }
+
+            public string Divide(string a, string b)
+            {
+                return (Convert.ToDouble(a) / Convert.ToDouble(b)).ToString();
             }
         }
     }
