@@ -15,9 +15,9 @@ namespace Delegates
         static void Main(string[] args)
         {
             Delegatos delegator = new Delegatos();
-            DelOne dele1 = new DelOne(delegator.Uno);
-            DelTwo dele2 = new DelTwo(delegator.Dos);
-            DelThree dele3 = new DelThree(delegator.Tress);
+            DelOne dele1 = delegator.Uno;
+            DelTwo dele2 = delegator.Dos;
+            DelThree dele3 = delegator.Tress;
 
             dele1();
             Console.WriteLine(dele2());
