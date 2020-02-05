@@ -8,37 +8,48 @@ namespace Overloading
 {
     class Program
     {
+        public delegate int IntDelegate(int a, int b);
+        public delegate float FloatDelegate(float a, float b);
+        public delegate string StringDelegate(string a, string b);
         static void Main(string[] args)
         {
             Math math = new Math();
 
-            Console.WriteLine(math.Add(1, 2));
-            Console.WriteLine(math.Add(1.3F, 2.2F));
-            Console.WriteLine(math.Add("5", "4"));
+            IntDelegate IntOverload;
+            IntOverload = math.Add;
+            Console.WriteLine(IntOverload(2, 3));
+            IntOverload = math.Subtract;
+            Console.WriteLine(IntOverload(2, 3));
+            IntOverload = math.Multiply;
+            Console.WriteLine(IntOverload(2, 3));
+            IntOverload = math.Divide;
+            Console.WriteLine(IntOverload(2, 3));
 
             Console.WriteLine("\n");
 
-            Console.WriteLine(math.Subtract(9, 2));
-            Console.WriteLine(math.Subtract(4.3F, 2.2F));
-            Console.WriteLine(math.Subtract("5", "4"));
+            FloatDelegate FloatOverload;
+            FloatOverload = math.Add;
+            Console.WriteLine(FloatOverload(2.1F, 3.7F));
+            FloatOverload = math.Subtract;
+            Console.WriteLine(FloatOverload(2.1F, 3.7F));
+            FloatOverload = math.Multiply;
+            Console.WriteLine(FloatOverload(2.1F, 3.7F));
+            FloatOverload = math.Divide;
+            Console.WriteLine(FloatOverload(2.1F, 3.7F));
 
             Console.WriteLine("\n");
 
-            Console.WriteLine(math.Multiply(4, 2));
-            Console.WriteLine(math.Multiply(1.3F, 2.2F));
-            Console.WriteLine(math.Multiply("3,1", "3"));
+            StringDelegate StringOverload;
+            StringOverload = math.Add;
+            Console.WriteLine(StringOverload("7,1", "1,4"));
+            StringOverload = math.Subtract;
+            Console.WriteLine(StringOverload("7,1", "1,4"));
+            StringOverload = math.Multiply;
+            Console.WriteLine(StringOverload("7,1", "1,4"));
+            StringOverload = math.Divide;
+            Console.WriteLine(StringOverload("7,1", "1,4"));
 
             Console.WriteLine("\n");
-
-            Console.WriteLine(math.Divide(4, 2));
-            Console.WriteLine(math.Divide(6.6F, 2.2F));
-            Console.WriteLine(math.Divide("9,3", "3"));
-
-            Console.WriteLine("\n");
-
-            Console.WriteLine(math.Power(4, 2));
-            Console.WriteLine(math.Power(2.3F, 4.1F));
-            Console.WriteLine(math.Power("9,3", "3"));
 
             Console.ReadLine();
         }
@@ -109,47 +120,6 @@ namespace Overloading
             public string Divide(string a, string b)
             {
                 return (Convert.ToDouble(a) / Convert.ToDouble(b)).ToString();
-            }
-
-            //---------------------------------------------------------------------------
-
-            public int Power(int a, int b)
-            {
-                int c = 1;
-                int i = 0;
-                while (i < b)
-                {
-                    c = c * a;
-                    i++;
-                }
-
-                return c;
-            }
-
-            public float Power(float a, float b)
-            {
-                float c = 1;
-                int i = 0;
-                while (i < b)
-                {
-                    c = c * a;
-                    i++;
-                }
-
-                return c;
-            }
-
-            public string Power(string a, string b)
-            {
-                double c = 1;
-                int i = 0;
-                while (i < Convert.ToDouble(b))
-                {
-                    c = c * Convert.ToDouble(a);
-                    i++;
-                }
-
-                return c.ToString();
             }
         }
     }
