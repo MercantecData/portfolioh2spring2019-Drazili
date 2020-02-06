@@ -92,11 +92,11 @@ namespace Nedarving
         }
     }
 
-    public class Bil : Computer
+    public class BilComputer : Computer
     {
-        int hjul;
-        string motor;
-        int sædder;
+        GPS gps;
+        string producent;
+        int sensors;
 
         public double TjekAfstand()
         {
@@ -208,6 +208,19 @@ namespace Nedarving
         {
             Console.WriteLine("Turn me off, so you can turn me on again *wink*");
             return false;
+        }
+    }
+
+    public class GPS
+    {
+        string mærke;
+        double precision;
+        double Energiforbrug;
+
+        public double[] FåPosition(int precision)
+        {
+            Console.WriteLine("Enhance!");
+            return new double[2];
         }
     }
 }
