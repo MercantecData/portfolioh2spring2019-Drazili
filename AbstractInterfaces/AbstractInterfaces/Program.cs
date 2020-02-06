@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibraTheLibrary;
 
 namespace AbstractInterfaces
 {
@@ -43,7 +44,8 @@ namespace AbstractInterfaces
                 new Personae("Momina", 92, "kvinde")
             };
 
-
+            LibraTheLibrary.Math math = new LibraTheLibrary.Math();
+            Console.WriteLine(math.Multiply("9", "6"));
             Console.ReadKey();
         }
     }
