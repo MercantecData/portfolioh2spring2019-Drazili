@@ -20,7 +20,7 @@ namespace OpsumeringUge1TestProgram
             registry.Login("lol", "kage");
             registry.AddNewUser(admin1);
             user1.isAdmin();
-            admin1.changePassword(user1, "Nigger");
+            admin1.changePassword(user1, "Kage");
 
             foreach (Job job in jobs)
             {
