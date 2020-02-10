@@ -14,7 +14,7 @@ namespace OpsumeringUge1TestProgram
             Registry registry = new Registry();
             User user1 = new User();
             Admin admin1 = new Admin();
-            Job[] jobs = new Job[2] { new HourlyPaidJob(6), new DailyPaidJob(35)};
+            Job[] jobs = new Job[7] { new HourlyPaidJob(6), new DailyPaidJob(35), new DailyPaidJob(35), new DailyPaidJob(21), new DailyPaidJob(31), new DailyPaidJob(95), new DailyPaidJob(45) };
 
 
             registry.Login("lol", "kage");
